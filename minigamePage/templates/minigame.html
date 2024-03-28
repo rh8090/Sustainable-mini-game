@@ -1,0 +1,27 @@
+<!--Page written by Jacob Ferris-->
+
+<!--Add the navbar-->
+{% extends "homePage/toolbar.html"%}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block style %}
+    {% endblock %}
+    {% block script %}        
+    {% endblock %}
+    {% block more %}
+    {% endblock %}
+</head>
+<body>
+    <!-- Block with the canvas element set to portrait and using the javascript for the game functions -->
+    {% block content %}
+        <div class= "space-gap my-auto" style="background: linear-gradient(0deg, rgb(48, 119, 163,1) 0%,rgba(39, 89, 121,1) 99%); height:100vh;">
+            <canvas id="canvas"></canvas>
+            <script src="{% static 'framework.js' %}" type="module"></script>
+            <script src="{% static 'logic.js' %}" type="module"></script>
+        </div>
+    {% endblock %}
+</body>
+</html>
